@@ -1,4 +1,4 @@
-# Rust Chess Game
+# Chess
 
 Welcome to my Rust-based chess game project! This is a console-based chess game implemented in Rust. The project aims to provide a simple yet functional chess-playing experience.
 
