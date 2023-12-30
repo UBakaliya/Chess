@@ -1,3 +1,51 @@
+# Rust Chess Game
+
+Welcome to my Rust-based chess game project! This is a console-based chess game implemented in Rust. The project aims to provide a simple yet functional chess-playing experience.
+
+## Features
+
+- **Console-based Interface**: Play chess directly in your terminal.
+- **Standard Chess Rules**: Follows the standard rules of chess.
+- **Two-player Mode**: Play against a friend locally.
+
+## Getting Started
+
+### Prerequisites
+
+To run this chess game, you'll need:
+
+- Rust installed on your machine. If you haven't installed Rust, you can get it from [here](https://www.rust-lang.org/tools/install).
+
+### Installation
+
+1. Clone this repository to your local machine:
+
+    ```bash
+    git clone https://github.com/UBakaliya/chess.git
+    ```
+
+2. Navigate into the project directory:
+
+    ```bash
+    cd chess
+    ```
+
+3. Build and run the game:
+
+    ```bash
+    cargo run
+    ```
+
+## Usage
+
+Once the game is running, follow the on-screen prompts to make your moves. The board will be displayed in the console, and you can input your moves using algebraic notation (e.g., "e2e4" to move a piece from e2 to e4).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
 # Chess
 
 Chess Game in Rust
@@ -33,3 +81,13 @@ Chess Game in Rust
                 - get_piece(fromX, fromY)
                 - can_move()
                     - use helper function depending on the piece move the item
+
+    Menu:
+        I  = Instructions
+        P  = Play
+        D  = Display Table
+        R  = Reset
+        Q  = Quit
+
+
+

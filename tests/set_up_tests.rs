@@ -1,4 +1,3 @@
-
 #[test]
 fn test_failed() {
     panic!("Make this test fail");
