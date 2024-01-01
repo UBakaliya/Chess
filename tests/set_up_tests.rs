@@ -1,9 +1,8 @@
-#[test]
-fn test_failed() {
-    panic!("Make this test fail");
-}
+#[cfg(test)]
 
-#[test]
-fn test_pass() {
-    assert_eq!(1, 1);
+mod set_up_tests {
+    #[test]
+    fn test() {
+        assert_eq!(1 + 1, 2)
+    }
 }

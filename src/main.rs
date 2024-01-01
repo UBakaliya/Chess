@@ -1,15 +1,36 @@
-#![allow(dead_code, unused_variables)]
-
 mod utils;
-use std::io::Read;
-
 use utils::*;
 
+use std::io::{self, Write};
+
 fn main() {
-    // start while loop and get input
-    display::display_menu();
-    display::display_instructions();
+    display::menu();
 
-    // validate input 
+    let mut input = String::new();
+    loop {
+        input.clear();
+        if let Err(err) = io::stdin().read_line(&mut input) {
+            eprintln!("Error reading input: {}", err);
+            continue;
+        }
 
+        // Trim leading/trailing whitespace for better handling
+        let trimmed_input = input.trim();
+
+        if trimmed_input.is_empty() {
+            println!("Please enter a valid option.");
+            continue;
+        }
+
+        let mut choice = trimmed_input.chars().next().unwrap().to_ascii_uppercase();
+
+        match choice {
+            'I' => display::instructions(),
+            'Q' => display::quite_game(),
+            'P' => game::play(),
+            _ => display::invalid_choice_message(),
+        };
+
+        display::menu();
+    }
 }
