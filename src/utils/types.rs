@@ -23,6 +23,10 @@ pub struct Square {
 }
 
 impl Square {
+    pub fn new(p: Piece, c: Color) -> Self {
+        Self { piece: p, color: c }
+    }
+
     pub fn is_occupied(&self) -> bool {
         (self.piece != Piece::None) && (self.color != Color::None)
     }
